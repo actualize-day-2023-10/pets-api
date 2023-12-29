@@ -10,7 +10,7 @@ class PetsController < ApplicationController
         breed: params[:breed]
       )
       @pet.save
-      render json: {message: "in create"}
+      render :show
     else
       render json: {message: "you must be logged in"}
     end
