@@ -1,4 +1,10 @@
 class PetsController < ApplicationController
+  def index
+    # @pets = Pet.all
+    @pets = current_user.pets
+    render :index
+  end
+  
   def create
     # p "*" * 88
     # p current_user
